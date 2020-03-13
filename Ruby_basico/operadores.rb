@@ -7,7 +7,7 @@ puts 'informe o numero 1: '
 numero1 = gets.chomp.to_i
 puts numero1.class
 
-
+#teste
 puts 'informe o numero 2: '
 numero2 = gets.chomp.to_i
 
@@ -28,6 +28,6 @@ puts total
 
 
 v1 = 11
-v2 = 11
+v2 = 12
 
 puts v1 >= v2
