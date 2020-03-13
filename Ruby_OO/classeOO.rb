@@ -1,6 +1,12 @@
 
 class Conta 
-    attr_accessor :saldo
+    #initialize metodo para ser executado automaticamente todo vez q eu estancio uma class
+    def initialize (nome)
+        self.nome = nome
+        self.saldo = 10.00
+    end
+
+    attr_accessor :saldo, :nome
 
     def deposito (valor)
         self.saldo += valor
@@ -11,8 +17,12 @@ class Conta
 end
 
 #instanciando uma class
-c = Conta.new 
-c.saldo = 50.99
+c = Conta.new("Augusto")
+#c.saldo = 50.99
 
 c.deposito(100.00)
 puts c.saldo
+puts c.nome
+c.deposito(100.00)
+puts c.saldo
+puts c.nome
