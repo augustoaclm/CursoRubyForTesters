@@ -54,26 +54,26 @@ describe ContaCorrente do
         @conta.saca(101.00)
       end
 
-      it 'Vejo mensagem' do
+      it 'Entao exibe mensagem' do
         expect(@conta.mensagem).to eql 'Saldo Insulficiente para saque :('
       end
 
-      it 'meu saldo permanece com zero' do
+      it 'e o saldo final e zero' do
         expect(@conta.saldo).to eql 100.00
       end
     end
 
-    context 'quando o valor do saque e maior que o limite por transacao' do
+    context 'quando supero o limite de saque' do
       before(:all) do
          @conta = ContaCorrente.new(1000.00)
          @conta.saca(701.00)
 
       end
-      it 'Vejo mensagem' do
+      it 'Entao exibe mensagem' do
          expect(@conta.mensagem).to eql 'Limite por saque maximo 700.00'
        end
  
-       it 'meu saldo permanece conforme o valor inicial' do
+       it 'e o saldo permanece' do
          expect(@conta.saldo).to eql 1000.00
        end
 
